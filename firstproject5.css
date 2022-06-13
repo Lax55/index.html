@@ -48,11 +48,40 @@ p {
     color: red;
 }
 
+.cta {
+    display: inline-block;
+    padding: 10px 13px;
+    color: white;
+    background-color: transparent;
+    border: 2px solid red;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    margin-top: 30px;
+    transition: .3s ease;
+    transition-property: background-color, color;
+}
+
+.cta:hover {
+    color: white;
+    background-color: crimson;
+}
+
+.brand h1 {
+    font-size: 3rem;
+    text-transform: uppercase;
+    color: white;
+}
+
+.brand h1 span {
+    color: crimson;
+}
+
 
 /* hero section */
 
 #hero {
-    background-image: url(./Images/earth-11595.jpg);
+    background-image: url(./Project\ Name\ \(2\).png);
     background-size: cover;
     background-position: top center;
     position: relative;
@@ -122,25 +151,6 @@ p {
 
 #hero h1:nth-child(3) span {
     animation-delay: 2.5s;
-}
-
-#hero .cta {
-    display: inline-block;
-    padding: 10px 13px;
-    color: white;
-    background-color: transparent;
-    border: 2px solid red;
-    font-size: 2rem;
-    text-transform: uppercase;
-    letter-spacing: .1rem;
-    margin-top: 30px;
-    transition: .3s ease;
-    transition-property: background-color, color;
-}
-
-#hero .cta:hover {
-    color: white;
-    background-color: crimson;
 }
 
 
@@ -318,6 +328,168 @@ p {
 /* End project section */
 
 
+/* about section */
+
+#about .about {
+    flex-direction: column-reverse;
+    text-align: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 100px 20px;
+}
+
+#about .col-left {
+    width: 250px;
+    height: 360px;
+}
+
+#about .col-right {
+    width: 100%;
+}
+
+#about .col-right h2 {
+    font-size: 1.8rem;
+    font-weight: 500;
+    letter-spacing: .2rem;
+    margin-bottom: 10px;
+}
+
+#about .col-right p {
+    margin-bottom: 20px;
+}
+
+#about .col-right .cta {
+    color: rgb(67, 26, 26);
+    margin-bottom: 50px;
+    padding: 10px 20px;
+    font-size: 2rem;
+}
+
+#about .col-left .about-img {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    border: 10px solid white;
+}
+
+#about .col-left .about-img:after {
+    content: '';
+    position: absolute;
+    left: -33px;
+    top: 19px;
+    height: 98%;
+    width: 98%;
+    border: 7px solid crimson;
+    z-index: -1;
+}
+
+
+/* End of about me section */
+
+
+/* contact section */
+
+#contact .contact {
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#contact .contact-items {
+    width: 400px;
+}
+
+#contact .contact-item {
+    width: 80%;
+    padding: 20px;
+    text-align: 10px;
+    padding: 30px;
+    margin: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 18px 0 #0000002c;
+}
+
+#contact .contact-item:hover {
+    box-shadow: 0px 0px 5px 0 #0000002c;
+    transform: .3s ease box-shadow;
+}
+
+#contact .icon {
+    width: 70px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+
+#contact .contact-info h1 {
+    font-size: 2 .5rem;
+    font-weight: 400;
+    margin-bottom: 5px;
+}
+
+#contact .contact-info h2 {
+    font-size: 1.3rem;
+    line-height: 2rem;
+    font-weight: 500;
+}
+
+
+/* End of Contact section */
+
+
+/* Footer */
+
+#footer {
+    background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+}
+
+#footer .footer {
+    min-height: 200px;
+    flex-direction: column;
+    padding-top: 50px;
+    padding-bottom: 10px;
+}
+
+#footer h2 {
+    color: white;
+    font-weight: 500;
+    font-size: 1.8rem;
+    letter-spacing: .1rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#footer .social-icon {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+#footer .social-item {
+    height: 50px;
+    width: 50px;
+    margin: 0 5px;
+}
+
+#footer .social-item img {
+    filter: grayscale(1);
+    transition: .3 ease filter;
+}
+
+#footer .social-item:hover img {
+    filter: grayscale(0);
+}
+
+#footer p {
+    color: white;
+    font-size: 1.3rem;
+}
+
+
+/* End of footer */
+
+
 /* keyframe */
 
 @keyframes text_reveal_box {
@@ -346,3 +518,31 @@ p {
 
 
 /* end keyframe */
+
+
+/* Media query for Tablet */
+
+@media only screen and(min-width:768px) {
+    .cta {
+        font-size: 2.5rem;
+        padding: 20px 60px;
+    }
+    h1.section-title {
+        font-size: 5rem;
+        /* */
+    }
+    /* hero */
+    #hero h1 {
+        font-size: 7rem;
+    }
+    /* End Hero */
+    #services .service-bottom .service-item {
+        flex-basis: 45%;
+        margin: 1.5%;
+    }
+    /* service section */
+    /* End service section */
+}
+
+
+/*End  media query for Tablet  */
